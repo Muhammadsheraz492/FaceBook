@@ -8,7 +8,9 @@ import {
   Touch,
 } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
+import { MaterialIcons } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
+import { FontAwesome } from "@expo/vector-icons";
 import Pressable from "react-native/Libraries/Components/Pressable/Pressable";
 import { useSelector } from "react-redux";
 const HomeScreen = ({ navigation }) => {
@@ -17,7 +19,9 @@ const HomeScreen = ({ navigation }) => {
   return (
     <View style={{ flex: 1 }}>
       <ScrollView>
-        <View style={{ height: "100%", width: "100%" }}>
+        <View
+          style={{ height: "100%", width: "100%", backgroundColor: "white" }}
+        >
           <View style={{ height: 10 }} />
           <View
             style={{
@@ -71,37 +75,58 @@ const HomeScreen = ({ navigation }) => {
             <View
               style={{
                 flexDirection: "row",
+                // alignItems: "center",
               }}
             >
-              <View style={{ width: "15%" }} />
-              <Entypo name="video-camera" size={24} color="red" />
-              <View style={{ width: 10 }} />
-              <Text style={{ fontSize: 15, fontWeight: "bold" }}>Live</Text>
-              <View style={{ width: 30 }} />
+              {/* <TouchableOpacity
+                onPress={() => navigation.navigate("LiveRecording")}
+              > */}
+              <View style={{ width: "10%" }} />
+              <TouchableOpacity
+                onPress={() => navigation.navigate("LiveRecording")}
+              >
+                <Entypo name="video-camera" size={20} color="red" />
+              </TouchableOpacity>
+
+              <View style={{ width: "3%" }} />
+              <TouchableOpacity
+                onPress={() => navigation.navigate("LiveRecording")}
+              >
+                <Text style={{ fontSize: 15, fontWeight: "bold" }}>Live</Text>
+              </TouchableOpacity>
+              <View style={{ width: "10%" }} />
               <View style={{ borderLeftWidth: 1 }} />
+              <View style={{ width: "5%" }} />
+
+              <MaterialIcons
+                name="photo-library"
+                size={21}
+                color="lightgreen"
+                onPress={() => navigation.navigate("LiveRecording")}
+              />
+              {/* </TouchableOpacity> */}
+              <View style={{ width: "3%" }} />
+              <Text style={{ fontSize: 15, fontWeight: "bold" }}>Phots</Text>
+              <View style={{ width: "10%" }} />
+              <View style={{ borderLeftWidth: 1 }} />
+              <View style={{ width: "4%" }} />
+              <MaterialIcons name="video-call" size={24} color="#7d1f8d" />
+              {/* <View style={{ width: "1%" }} /> */}
+              <Text style={{ fontSize: 15, fontWeight: "bold" }}>Rooms</Text>
+              <View style={{ width: "10%" }} />
             </View>
+          </View>
+          <View style={{ height: 10 }} />
+
+          <View style={{ width: "100%" }}>
             <View
               style={{
-                flexDirection: "row",
+                borderWidth: 5,
+                borderColor: "grey",
+                width: "100%",
+                backgroundColor: "black",
               }}
-            >
-              <View style={{ width: "7%" }} />
-              <Entypo name="video-camera" size={24} color="red" />
-              <View style={{ width: 10 }} />
-              <Text style={{ fontSize: 15, fontWeight: "bold" }}>Live</Text>
-              <View style={{ width: 30 }} />
-              <View style={{ borderLeftWidth: 1 }} />
-            </View>
-            <View
-              style={{
-                flexDirection: "row",
-              }}
-            >
-              <Entypo name="video-camera" size={24} color="red" />
-              <View style={{ width: 10 }} />
-              <Text style={{ fontSize: 15, fontWeight: "bold" }}>Live</Text>
-              <View style={{ width: 40 }} />
-            </View>
+            />
           </View>
         </View>
 
