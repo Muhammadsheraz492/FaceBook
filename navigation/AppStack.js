@@ -7,7 +7,7 @@ const AppStak = () => {
     console.log("djfnhdf");
   }
   return (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Splash" component={Splash} />
     </Stack.Navigator>
   );
