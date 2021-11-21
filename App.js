@@ -1,14 +1,17 @@
 import React from "react";
-import { View, Text } from "react-native";
-import { Provider } from "react";
+
 import Providr from "./navigation";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { ScrollView } from "react-native-gesture-handler";
+
+import store from "./Redux/store";
+import { Provider } from "react-redux";
 const App = () => {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <Providr />
-    </SafeAreaView>
+    <Provider store={store}>
+      <SafeAreaView style={{ flex: 1 }}>
+        <Providr />
+      </SafeAreaView>
+    </Provider>
   );
 };
 

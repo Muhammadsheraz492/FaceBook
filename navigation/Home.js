@@ -15,7 +15,7 @@ import { SimpleLineIcons } from "@expo/vector-icons";
 import Menu from "../Screens/Menu";
 const Tab = createMaterialTopTabNavigator();
 
-const Home = () => {
+const Home = ({ navigation }) => {
   return (
     <Tab.Navigator
     // screenOptions={{
