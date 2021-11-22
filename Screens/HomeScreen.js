@@ -11,6 +11,7 @@ import { ScrollView } from "react-native-gesture-handler";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
+import { AntDesign } from "@expo/vector-icons";
 import Pressable from "react-native/Libraries/Components/Pressable/Pressable";
 import { useSelector } from "react-redux";
 const HomeScreen = ({ navigation }) => {
@@ -22,12 +23,13 @@ const HomeScreen = ({ navigation }) => {
         <View
           style={{ height: "100%", width: "100%", backgroundColor: "white" }}
         >
-          <View style={{ height: 10 }} />
+          <View style={{ height: 10, backgroundColor: "white" }} />
           <View
             style={{
               flexDirection: "row",
               // height: "100%",
               width: "98%",
+              backgroundColor: "white",
             }}
           >
             <TouchableOpacity onPress={() => navigation.navigate("Profile")}>
@@ -36,13 +38,14 @@ const HomeScreen = ({ navigation }) => {
                   width: 50,
                   height: 50,
                   borderRadius: 25,
+                  backgroundColor: "white",
                 }}
                 source={{
                   uri: "https://scontent.flhe2-2.fna.fbcdn.net/v/t39.30808-6/228861115_1000663874058141_8415421872344318037_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeHTiql4f_8RAY5mn58Tcrdu0YJdCV2bbgrRgl0JXZtuCmdXvpwH0Ju8INmUkhN60mWua6CRCGPiUgSa94g2BF1-&_nc_ohc=B0mZbVnoCNwAX8ixzIw&tn=ornKWTrJzgOAslt6&_nc_zt=23&_nc_ht=scontent.flhe2-2.fna&oh=24a49efe283e0891f6d9dc138194c4b0&oe=619FE96E",
                 }}
               />
             </TouchableOpacity>
-            <View style={{ width: 5 }} />
+            <View style={{ width: 5, backgroundColor: "white" }} />
 
             <View
               style={{
@@ -61,21 +64,32 @@ const HomeScreen = ({ navigation }) => {
               </TouchableOpacity>
             </View>
           </View>
-          <View style={{ height: 20 }} />
+          <View style={{ height: 20, backgroundColor: "white" }} />
           <View
             style={{
               borderBottomWidth: 1,
               width: "95%",
               alignSelf: "center",
+
               borderColor: "#949494",
             }}
           />
-          <View style={{ height: 10 }} />
-          <View style={{ width: "100%", flexDirection: "row" }}>
+          <View style={{ height: 10, backgroundColor: "white" }} />
+          <View
+            style={{
+              width: "100%",
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "center",
+              backgroundColor: "white",
+            }}
+          >
             <View
               style={{
                 flexDirection: "row",
                 // alignItems: "center",
+                justifyContent: "center",
+                backgroundColor: "white",
               }}
             >
               {/* <TouchableOpacity
@@ -116,8 +130,8 @@ const HomeScreen = ({ navigation }) => {
               <View style={{ width: "10%" }} />
             </View>
           </View>
-          <View style={{ height: 10 }} />
-
+          <View style={{ height: 10, backgroundColor: "white" }} />
+          {/* Next */}
           <View style={{ width: "100%" }}>
             <View
               style={{
@@ -125,12 +139,79 @@ const HomeScreen = ({ navigation }) => {
                 borderColor: "grey",
                 width: "100%",
                 backgroundColor: "black",
+                backgroundColor: "white",
               }}
             />
+
+            <View style={{ width: "90%", flexDirection: "row" }}>
+              <View
+                style={{
+                  // backgroundColor: "red",
+                  borderWidth: 1,
+                  borderColor: "#7d1f8d",
+                  height: 150,
+                  // width: 10,
+                  flex: 0.3,
+                  marginTop: 8,
+                  marginLeft: 8,
+                  borderRadius: 20,
+                  zIndex: 0,
+                  justifyContent: "flex-end",
+                  // alignItems:'center'
+                  width: 20,
+                }}
+              >
+                <TouchableOpacity>
+                  <Image
+                    style={{
+                      width: 90,
+                      height: 90,
+                      borderRadius: 50,
+                      marginTop: -50,
+                      alignSelf: "center",
+                      justifyContent: "flex-end",
+                    }}
+                    source={{
+                      uri: "https://scontent.flhe2-2.fna.fbcdn.net/v/t39.30808-6/228861115_1000663874058141_8415421872344318037_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeHTiql4f_8RAY5mn58Tcrdu0YJdCV2bbgrRgl0JXZtuCmdXvpwH0Ju8INmUkhN60mWua6CRCGPiUgSa94g2BF1-&_nc_ohc=B0mZbVnoCNwAX8ixzIw&tn=ornKWTrJzgOAslt6&_nc_zt=23&_nc_ht=scontent.flhe2-2.fna&oh=24a49efe283e0891f6d9dc138194c4b0&oe=619FE96E",
+                    }}
+                  />
+                </TouchableOpacity>
+
+                <View
+                  style={{
+                    // bottom: 1,
+                    backgroundColor: "#E2E2DE",
+                    // borderColor: "#fff",
+                    // height: 70,
+                    flex: 0.5,
+
+                    borderRadius: 20,
+                    // borderTopEndRadius: 80,
+
+                    zIndex: 1,
+                    // borderWidth: 3,
+                    // borderTopColor: "blue",
+                    // alignSelf: "flex-end",
+                    alignItems: "center",
+                  }}
+                >
+                  <View
+                    style={{
+                      height: 25,
+                      marginTop: -15,
+                      alignItems: "center",
+                      width: 5000,
+                    }}
+                  >
+                    <TouchableOpacity>
+                      <AntDesign name="pluscircle" size={24} color="white" />
+                    </TouchableOpacity>
+                  </View>
+                </View>
+              </View>
+            </View>
           </View>
         </View>
-
-        {/* Next */}
       </ScrollView>
     </View>
   );
